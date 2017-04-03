@@ -1,0 +1,47 @@
+REQUEST
+
+    private void getMaster() {
+        if (Utility.checkInternetConnection(getActivity().getApplicationContext())) {
+
+            Map<String, String> postParam = new HashMap<String, String>();
+            postParam.put("parameter key", "parameter value");
+
+            WebServiceCall serviceCall = new WebServiceCall(context, APIURLs.API URL, this, new JSONObject(postParam));
+            serviceCall.postRequestBackground(1, TAG, true);
+
+        } else {
+            Snackbar snackbar = Snackbar
+                    .make(rl, "No internet connection", Snackbar.LENGTH_LONG);
+            snackbar.show();
+            return;
+        }
+    }
+
+
+RESPONSE
+
+ @Override
+    public void response(int returnFrom, String strresponse) {
+        switch (returnFrom) {
+       
+            case 1:
+                try {
+                    JSONObject response = new JSONObject(strresponse);
+                    new ParseLossTypeMasterAyncTask().execute(response);
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
+                break;
+
+            default:
+                break;
+        }
+    }
+
+ERROR HANDLING
+
+    @Override
+    public void onError(int returnFrom, String errorMsg) {
+        Snackbar snackbar = Snackbar.make(rl, errorMsg, Snackbar.LENGTH_LONG);
+        snackbar.show();
+    }
