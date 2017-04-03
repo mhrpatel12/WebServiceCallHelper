@@ -1,7 +1,7 @@
 package com.hdfc.claims.ServiceCallHelper;
 
 /**
- * Created by pathanaa on 25-04-2016.
+ * Created by Mihir on 25-04-2016.
  */
 import android.content.Context;
 import android.net.ConnectivityManager;
