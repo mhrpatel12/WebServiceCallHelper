@@ -1,5 +1,3 @@
-package com.hdfc.claims.ServiceCallHelper;
-
 /**
  * Created by patelmih on 12/18/2015.
  */

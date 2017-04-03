@@ -1,5 +1,3 @@
-package com.hdfc.claims.ServiceCallHelper;
-
 import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.Context;

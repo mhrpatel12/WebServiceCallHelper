@@ -1,5 +1,3 @@
-package com.hdfc.claims.ServiceCallHelper;
-
 import android.content.Context;
 
 import com.android.volley.AuthFailureError;
@@ -8,7 +6,6 @@ import com.android.volley.NoConnectionError;
 import com.android.volley.ParseError;
 import com.android.volley.ServerError;
 import com.android.volley.TimeoutError;
-import com.hdfc.claims.R;
 
 /**
  * ----------------------------------------------------------------------
