@@ -1,3 +1,3 @@
 # VolleyWebServiceCallHelper
 
-Add these files in saperate package in your project for integrating volley.
+Add these files in saperate package of your project for integrating volley.
